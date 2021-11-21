@@ -1,0 +1,10 @@
+Hola para que este (myfetch) funcione en su pc, debe instalar la lista de progrmas abajo?
+
+sudo pacman -S bat tree gedit lolcat xorg-xrandr bc
+
+una vez intalado: proceda hacer esto:
+1- sudo mv myfetch /usr/bin
+  1.1- cd /usr/bin
+2- sudo chmod +x my fetch.sh
+3- en su SHELL  de su preferencia agragar eso: if [ -f /usr/bin/myfetch.sh ]; then myfetch.sh; fi
+4 - Cerrar e abrir nuevamente su terminal
