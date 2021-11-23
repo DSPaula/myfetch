@@ -13,8 +13,8 @@ display_info (){
 	d_desk=$XDG_SESSION_DESKTOP
 	d_font=$(fc-match | sed 's/\..*//g')
 	d_cpu=$(cat /proc/cpuinfo | grep -o 'model name.*' | sed -n 1p | sed 's/.*:.//g;s/(.*)//g')
-	d_ram=$(echo $(cat /proc/meminfo | sed -n 1p | tr -d [A-Za-z:' ']) / 1000000 | bc)" MB"
-	d_memfree=$(echo "scale=2;$(cat /proc/meminfo |sed -n 2p | tr -d [A-Za-z:' '])" / 1000000 | bc)" MB"
+	d_ram=$(echo $(cat /proc/meminfo | sed -n 1p | tr -d [A-Za-z:' ']) / 1000000 | bc)" GB"
+	d_memfree=$(echo "scale=2;$(cat /proc/meminfo |sed -n 2p | tr -d [A-Za-z:' '])" / 1000000 | bc)" GB"
 	d_architeture=$(getconf LONG_BIT)"-bit"
 	d_browser=$(xdg-settings get default-web-browser | sed 's/vivaldi/vivaldi/g;s/-.*//g')
 	d_char=$(expr length "$d_title"); qtd=
